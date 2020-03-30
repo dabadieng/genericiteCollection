@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author dieng
+ *
+ */
+module GenericiteCollection {
+}
