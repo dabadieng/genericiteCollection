@@ -11,7 +11,7 @@ public class Culliere extends Ustensile {
 		this.longeur = longeur;
 	}
 
-	public double getLongeur() {
+	public double calculSurface() {
 		return this.longeur;
 	}
 	

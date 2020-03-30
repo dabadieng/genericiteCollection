@@ -10,6 +10,30 @@ public abstract class Ustensile {
 		this.dateUs = dateUs;
 	}
 
+	public abstract double calculSurface();
+
+	static void surfaceTotale (List <? extends Ustensile> tab) {
+		double total = 0;
+		for (Ustensile a : tab) {
+			if (a instanceof Assiette) {
+				total += a.calculSurface();
+			}
+		}
+
+		System.out.println("la surface total des assiettes : " + total);
+	}
+
+	static void calculQuantite(List<? extends Ustensile> tab) {
+		int nbCuilliere;
+		for (Ustensile u : tab) {
+			if (u instanceof Culliere) {
+				nbCuilliere++;
+			}
+
+		}
+		System.out.println("le nombre de cuilllères est de : " + nbCuilliere);
+	}
+
 	static void valeurTotal(List<? extends Ustensile> Ustensiles) {
 		double valeur = 0;
 		for (Ustensile U : Ustensiles) {
@@ -28,6 +52,15 @@ public abstract class Ustensile {
 	public int getDateUs() {
 		return dateUs;
 	}
+
+	static void surfaceTotale(List<? extends Ustensile> tab) {
+		double total = 0;
+		for (Ustensile a : tab) {
+			if (a instanceof Assiette) {
+				total += a.calculSurface(); 
+				//total += ((Assiette) a).calculSurface();
+			}
+		}
 	
 	
 
